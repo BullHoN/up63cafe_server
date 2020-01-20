@@ -1,0 +1,27 @@
+
+#navbar {
+    background: #eee;
+}
+
+#legal_heading{
+    text-align: center;
+    margin-top: 5vh;
+    color: #5B5B5B;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+#legal-sub-heading {
+    font-family: 'Montserrat', sans-serif;
+}
+
+#legal_text {
+    margin-top: 16px;
+    color:#666;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+}
+
+#section {
+    margin-bottom: 32px;
+}
