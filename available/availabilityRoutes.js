@@ -1,13 +1,26 @@
 const express = require('express');
 const MenuItem = require('../models/MenuItem');
+
 const router = express.Router();
 
+let paymentJson = require('../available/deliveryPrice.json');
 
 let allowPayment = false;
 let deliveryPrice = 12;
 
+function getDeliveryPrice() {
+	deliveryPrice = paymentJson.price;
+}
+
+function changeDeliveryPrice(amount) {
+	paymentJson.price = amount;
+	deliveryPrice = amount;
+}
+
+getDeliveryPrice();
 
 router.get('/checkoutDetails',(req,res)=>{
+	getDeliveryPrice();
 	res.json({
 		allowPayment:allowPayment,
 		deliveryPrice:deliveryPrice
@@ -16,7 +29,8 @@ router.get('/checkoutDetails',(req,res)=>{
 
 router.get('/deliveryPrice',(req,res)=>{
 	if(req.query.nwPrice){
-	  deliveryPrice = req.query.nwPrice;
+	  changeDeliveryPrice(req.query.nwPrice);
+	  // deliveryPrice = req.query.nwPrice;
 	  res.json({changed:true});
 	}else{
 	  res.json({deliveryPrice:deliveryPrice});

@@ -21,6 +21,10 @@ const notificationSchema = mongoose.Schema({
 	deliveryBoyName:{
 		type:String,
 		default:''
+	},
+	deliveryCharge:{
+		type:Number,
+		default:-1
 	}
 },{ timestamps: true });
 

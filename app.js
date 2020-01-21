@@ -5,26 +5,9 @@ const path = require('path');
 
 const app = express();
 
-// const DeliveryBoy = require('./models/DeliveryBoy')
-
 mongoose.connect('mongodb+srv://Up63Users:PMz5rkroMTvbCR02@up63cafe-pzkyn.mongodb.net/test?retryWrites=true&w=majority',{useNewUrlParser:true,useUnifiedTopology: true})
 .then(()=>console.log('conncted to mongodb'))
 .catch((err)=>console.log(err));
-
-// testing 
-
-
-// setTimeout(function() {
-
-// 	const deliveryBoy = new DeliveryBoy({
-// 		name:'vaibhav',
-// 		fcmId:'rdfd_ajhsjkhfjkansfjnasjfnvdsrj7yhtrjyhtr',
-// 		phoneNo:'9532455040'
-// 	}).save().then(()=>{
-// 		console.log('sample data saved');
-// 	})
-
-// }, 1000);
 
 //middlewares
 app.use(express.json());

@@ -2,6 +2,8 @@ const express = require('express');
 const User = require('../models/User');
 const Notification = require('../models/Notification');
 
+const priceJson = require('../available/deliveryPrice');
+
 const admin = require("firebase-admin");
 
 const serviceAccount = require('../keys.json');
@@ -84,7 +86,8 @@ async function getCustomerDetails(items) {
 						itemDelivered:item.itemDelivered,
 						customer_email:item.customer_email,
 						preparationStarted:item.preparationStarted,
-						arrivedAt:dateString
+						arrivedAt:dateString,
+						deliveryCharge:item.deliveryCharge
 					}
 
 					newItems.name = user.name;
@@ -121,7 +124,7 @@ router.post('/',(req,res)=>{
 				// console.log('edited');
 				saveNotification(email,req.body.fcm_id,req.body.orderId,req.body.orderItems,req.body.email,req.body.total)
 					.then(()=>{
-						// sendNotification(req.body.total);
+						sendNotification(req.body.total);
 						console.log('new order');
 						res.json({status:true});
 					})
@@ -163,7 +166,8 @@ function saveNotification(email,fcmId,orderId,orderItems,customer_email,amount) 
 		orderId:orderId,
 		orderItems:orderItems,
 		customer_email:customer_email,
-		amount:amount
+		amount:amount,
+		deliveryCharge:eval(priceJson.price)
 	}).save();
 
 	return notification;
