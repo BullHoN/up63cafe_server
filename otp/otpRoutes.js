@@ -5,7 +5,6 @@ const sendMail = require('../mail/mail');
 const router = express.Router();
 
 router.post('/',(req,res)=>{
-	// console.log(req.body);
 
 	let responseData = {
 		isValidOtp:false
@@ -29,7 +28,6 @@ router.post('/',(req,res)=>{
 
 
 router.get('/resend',(req,res)=>{
-	console.log(req.query)
 
 	let responseData = {
 		otpSend:false
