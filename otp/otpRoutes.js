@@ -18,6 +18,7 @@ router.post('/',(req,res)=>{
 			if(user.otp == req.body.otp){
 				user.isVerified = true;
 				responseData.isValidOtp = true;
+				user.save();
 			}
 			res.json(responseData);
 		}else {
