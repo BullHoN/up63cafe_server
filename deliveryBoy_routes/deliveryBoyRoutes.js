@@ -38,16 +38,20 @@ router.post('/deliveryBoy/changeStatus',(req,res)=>{
 })
 
 router.post('/register/deliveryBoy',(req,res)=>{
-	// bypass the duplicate validataion
-	console.log('new delivery boy registered!!');
-	const deliveryBoy = new DeliveryBoy({
-		name:req.body.name,
-		phoneNo:req.body.phoneNo,
-		fcmId:req.body.fcmId
-	}).save().then(()=>{
-		res.json({status:true});
+	DeliveryBoy.findOne({name:req.body.name}).then((oldDeliveryBoy)=>{
+		if(oldDeliveryBoy){
+			res.json({status:true});
+		}else {
+			console.log('new delivery boy registered!!');
+			const deliveryBoy = new DeliveryBoy({
+				name:req.body.name,
+				phoneNo:req.body.phoneNo,
+				fcmId:req.body.fcmId
+			}).save().then(()=>{
+				res.json({status:true});
+			})
+		}
 	})
-
 })
 
 module.exports = router;
