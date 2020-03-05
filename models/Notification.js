@@ -25,6 +25,10 @@ const notificationSchema = mongoose.Schema({
 	deliveryCharge:{
 		type:Number,
 		default:-1
+	},
+	isPaid:{
+		type:Boolean,
+		default:false
 	}
 },{ timestamps: true });
 

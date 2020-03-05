@@ -87,6 +87,7 @@ async function getCustomerDetails(items) {
 						customer_email:item.customer_email,
 						preparationStarted:item.preparationStarted,
 						arrivedAt:dateString,
+						isPaid:item.isPaid,
 						deliveryCharge:item.deliveryCharge
 					}
 
@@ -115,6 +116,8 @@ router.post('/',(req,res)=>{
 
 	const email = req.body.email ? req.body.email : "none@gmail.com";
 
+	// console.log(req.body);
+
 	User.findOne({email:email}).then((user)=>{
 		if(user){
 			user.address = req.body.address;
@@ -122,7 +125,7 @@ router.post('/',(req,res)=>{
 			user.phoneNo = req.body.phNumber;
 			user.save().then(()=>{
 				// console.log('edited');
-				saveNotification(email,req.body.fcm_id,req.body.orderId,req.body.orderItems,req.body.email,req.body.total)
+				saveNotification(email,req.body.fcm_id,req.body.orderId,req.body.orderItems,req.body.email,req.body.total,req.body.isPaid)
 					.then(()=>{
 						sendNotification(req.body.total);
 						console.log('new order');
@@ -158,7 +161,7 @@ function sendNotification(total) {
 	});	
 }
 
-function saveNotification(email,fcmId,orderId,orderItems,customer_email,amount) {
+function saveNotification(email,fcmId,orderId,orderItems,customer_email,amount,isPaid) {
 
 	const notification = new Notification({
 		email:email,
@@ -167,6 +170,7 @@ function saveNotification(email,fcmId,orderId,orderItems,customer_email,amount) 
 		orderItems:orderItems,
 		customer_email:customer_email,
 		amount:amount,
+		isPaid:isPaid,
 		deliveryCharge:eval(priceJson.price)
 	}).save();
 

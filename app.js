@@ -26,6 +26,7 @@ app.use('/notification',require('./payment/paymentNotification'));
 app.use('/',require('./delivery/deliveryRoutes'));
 app.use('/',require('./available/availabilityRoutes'));
 app.use('/',require('./deliveryBoy_routes/deliveryBoyRoutes'));
+app.use('/user',require('./forget_password/forgetPasswordRoutes'));
 
 
 // static images
@@ -37,7 +38,7 @@ app.get('/',(req,res)=>{
 	res.sendFile(path.join(__dirname,'/landing_page/index.html'))
 })
 
-const PORT = 8080;
+const PORT = 5000;
 
 app.listen(PORT,()=>{
 	console.log("server is running at port 5000")

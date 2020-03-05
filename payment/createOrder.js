@@ -23,6 +23,7 @@ router.post('/',(req,res)=>{
 
 	instance.orders.create(options, function(err, order) {
   		console.log('new order created');
+  		// instead use short id npm package !! 
   		res.json({
   			order_id:order.id,
   			amount:order.amount
