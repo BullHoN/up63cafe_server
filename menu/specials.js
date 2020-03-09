@@ -5,7 +5,7 @@ const specials = [{
 	itemImageUrl:"https://www.up63cafe.com/images/crispy_momos.jpg"
 },
 {
-	itemName:"Chowmein Somasa ( Per peiece )",
+	itemName:"Chowmein Somasa",
 	fullPlatePrice:10,
 	halfPlatePrice:0,
 	itemImageUrl:"https://www.up63cafe.com/images/chowmein_samosa.jpg"
