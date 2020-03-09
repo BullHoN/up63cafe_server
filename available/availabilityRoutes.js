@@ -5,7 +5,7 @@ const router = express.Router();
 
 let paymentJson = require('../available/deliveryPrice.json');
 
-let allowPayment = true;
+let allowPayment = false;
 let deliveryPrice = 12;
 
 function getDeliveryPrice() {
