@@ -6,9 +6,6 @@ const categories = [
 	 	categoryName:"Juices"
 	},
 	{
-	 	categoryName:"Shakes"
-	},
-	{
 	 	categoryName:"Chowmein"
 	},
 	{
