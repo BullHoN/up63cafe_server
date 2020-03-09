@@ -5,7 +5,7 @@ const router = express.Router();
 
 let paymentJson = require('../available/deliveryPrice.json');
 
-let allowPayment = false;
+let allowPayment = true;
 let deliveryPrice = 12;
 
 function getDeliveryPrice() {
@@ -19,11 +19,16 @@ function changeDeliveryPrice(amount) {
 
 getDeliveryPrice();
 
+const UPI_Id = "7081256474@ybl";
+const UPI_Name = "Prakhar Bhatt";
+
 router.get('/checkoutDetails',(req,res)=>{
 	getDeliveryPrice();
 	res.json({
 		allowPayment:allowPayment,
-		deliveryPrice:deliveryPrice
+		deliveryPrice:deliveryPrice,
+		upiId:UPI_Id,
+		upiName:UPI_Name
 	})
 })
 
