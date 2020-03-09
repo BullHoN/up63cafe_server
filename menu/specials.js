@@ -21,6 +21,12 @@ const specials = [{
 	fullPlatePrice:55,
 	halfPlatePrice:15,
 	itemImageUrl:"https://www.up63cafe.com/images/chilly_potato.jpg"
+},
+{
+	itemName:"American Choupsy",
+	fullPlatePrice:80,
+	halfPlatePrice:40,
+	itemImageUrl:"https://www.up63cafe.com/images/choupsy.jpeg"
 }
 ];
 
