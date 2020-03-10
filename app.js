@@ -41,5 +41,5 @@ app.get('/',(req,res)=>{
 const PORT = 8080;
 
 app.listen(PORT,()=>{
-	console.log("server is running at port 5000")
+	console.log("server is running at port " + PORT)
 })
