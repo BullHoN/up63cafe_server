@@ -26,19 +26,19 @@ const specials = [{
 	itemName:"American Choupsy",
 	fullPlatePrice:80,
 	halfPlatePrice:40,
-	itemImageUrl:"https://www.up63cafe.com/images/choupsy.jpeg"
+	itemImageUrl:"https://www.up63cafe.com/images/choupsy.jpg"
 },
 {
 	itemName:"Veg Biryani",
 	fullPlatePrice:80,
 	halfPlatePrice:40,
-	itemImageUrl:"https://www.up63cafe.com/images/veg_biryani.jpeg"
+	itemImageUrl:"https://www.up63cafe.com/images/veg_biryani.jpg"
 },
 {
 	itemName:"Ghobhi Pepper Fry",
 	fullPlatePrice:80,
 	halfPlatePrice:40,
-	itemImageUrl:"https://www.up63cafe.com/images/gobi_pepper.jpeg"
+	itemImageUrl:"https://www.up63cafe.com/images/gobi_pepper.jpg"
 }
 ];
 
