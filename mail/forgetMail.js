@@ -39,6 +39,8 @@ function sendMail(name,email,url){
                     }
                     
                     a {
+                        background: #ffffff;
+                        padding: 5px 10px;
                         text-decoration: none;
                         color: #575757;
                     }

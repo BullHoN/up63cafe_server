@@ -5,7 +5,7 @@ const router = express.Router();
 
 let paymentJson = require('../available/deliveryPrice.json');
 
-let allowPayment = false;
+let allowPayment = true;
 let deliveryPrice = 12;
 
 function getDeliveryPrice() {
@@ -56,7 +56,7 @@ router.post('/toggleAvailability',(req,res)=>{
 
 	let categoryItems = req.body.changedItems.split(',');
 	
-	console.log(categoryItems);
+	// console.log(categoryItems);
 
 	toggleAvailability(categoryItems).then((val)=>{
 		res.json({status:val})
@@ -74,7 +74,7 @@ async function toggleAvailability(categoryItems) {
 					if(category){
 						category.isAvailable = !category.isAvailable;
 						category.save().then(()=>{
-							console.log(categoryItem + " saved");
+							// console.log(categoryItem + " saved");
 							resolve(1);
 						});
 					}

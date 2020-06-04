@@ -28,7 +28,7 @@ router.post('/update',(req,res)=>{
 					break;						
 			}
 			notification.save().then(()=>{
-				console.log('order prepared');
+				// console.log('order prepared');
 				res.json({status:true});
 			})
 		}
@@ -120,6 +120,12 @@ router.post('/',(req,res)=>{
 
 	User.findOne({email:email}).then((user)=>{
 		if(user){
+
+			if(user.blocked && !req.body.isPaid){
+				res.json({status:false});
+				return;
+			}
+
 			user.address = req.body.address;
 			user.nearByAddress = req.body.nearBy;
 			user.phoneNo = req.body.phNumber;

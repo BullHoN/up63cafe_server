@@ -32,6 +32,10 @@ const userSchema = mongoose.Schema({
 	otp:{
 		type:Number,
 		default:-1
+	},
+	blocked:{
+		type:Boolean,
+		default:false
 	}
 })
 

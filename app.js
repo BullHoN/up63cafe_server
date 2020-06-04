@@ -14,6 +14,15 @@ app.use(express.json());
 app.use(express.urlencoded({extended:false}));
 app.use(cors());
 
+// test
+// const User = require('./models/User');
+// User.find({}).then((users)=>{
+// 	users.forEach((user)=>{
+// 		user.blocked = false;
+// 		user.save();
+// 	})
+// })
+
 // routes
 app.use('/login',require('./login/loginRoutes'));
 app.use('/register',require('./signup/signUpRoutes'));
@@ -27,6 +36,7 @@ app.use('/',require('./delivery/deliveryRoutes'));
 app.use('/',require('./available/availabilityRoutes'));
 app.use('/',require('./deliveryBoy_routes/deliveryBoyRoutes'));
 app.use('/user',require('./forget_password/forgetPasswordRoutes'));
+app.use('/user/block',require('./block_user/blockUser'));
 
 
 // static images
@@ -38,7 +48,7 @@ app.get('/',(req,res)=>{
 	res.sendFile(path.join(__dirname,'/landing_page/index.html'))
 })
 
-const PORT = 8080;
+const PORT = 5000;
 
 app.listen(PORT,()=>{
 	console.log("server is running at port " + PORT)
