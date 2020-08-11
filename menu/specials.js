@@ -5,6 +5,12 @@ const specials = [{
 	itemImageUrl:"https://www.up63cafe.com/images/crispy_momos.jpg"
 },
 {
+	itemName:"Crispy Paneer Pakoda",
+	fullPlatePrice:50,
+	halfPlatePrice:100,
+	itemImageUrl:"https://www.up63cafe.com/images/chowmein_samosa.jpg"
+},
+{
 	itemName:"Chowmein Somasa",
 	fullPlatePrice:10,
 	halfPlatePrice:0,
