@@ -15,13 +15,7 @@ app.use(express.urlencoded({extended:false}));
 app.use(cors());
 
 // test
-// const User = require('./models/User');
-// User.find({}).then((users)=>{
-// 	users.forEach((user)=>{
-// 		user.blocked = false;
-// 		user.save();
-// 	})
-// })
+
 
 // routes
 app.use('/login',require('./login/loginRoutes'));
@@ -37,6 +31,7 @@ app.use('/',require('./available/availabilityRoutes'));
 app.use('/',require('./deliveryBoy_routes/deliveryBoyRoutes'));
 app.use('/user',require('./forget_password/forgetPasswordRoutes'));
 app.use('/user/block',require('./block_user/blockUser'));
+app.use('/order/cancel',require('./cancel/orderCanel'))
 
 
 // static images

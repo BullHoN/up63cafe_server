@@ -13,6 +13,14 @@ router.post('/',(req,res)=>{
 	}
 
 	const email = req.body.email;
+	let emailOffset = email.split('@')[1];
+	let lastIndex = emailOffset.indexOf('.');
+
+	if(emailOffset.substring(lastIndex) != '.com'){
+		console.log(email + " was invalid...")
+		return;
+	}
+
 
 	User.findOne({email:email}).then((user)=>{
 		if(user){
@@ -28,7 +36,7 @@ router.post('/',(req,res)=>{
 			registerNewUser(email,req.body.password,req.body.name,otp).save()
 				.then(()=>{
 					console.log('new user saved');
-					sendMail(req.body.name,email,otp);
+					// sendMail(req.body.name,email,otp);
 					res.json(responseData);
 			})
 		}
