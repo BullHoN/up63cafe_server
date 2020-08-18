@@ -5,10 +5,28 @@ const specials = [{
 	itemImageUrl:"https://www.up63cafe.com/images/crispy_momos.jpg"
 },
 {
+	itemName:"Veg Chapli Kabab",
+	fullPlatePrice:60,
+	halfPlatePrice:0,
+	itemImageUrl:"https://www.up63cafe.com/images/chapli_kabab.jpg"
+},
+{
+	itemName:"Maggie Manchurian",
+	fullPlatePrice:70,
+	halfPlatePrice:0,
+	itemImageUrl:"https://www.up63cafe.com/images/maggie_manch.jpg"
+},
+{
 	itemName:"Crispy Paneer Pakoda",
-	fullPlatePrice:50,
-	halfPlatePrice:100,
+	fullPlatePrice:100,
+	halfPlatePrice:50,
 	itemImageUrl:"https://www.up63cafe.com/images/chowmein_samosa.jpg"
+},
+{
+	itemName:"Chilly Soya Bean",
+	fullPlatePrice:70,
+	halfPlatePrice:40,
+	itemImageUrl:"https://www.up63cafe.com/images/chilly_soya_bean.jpg"
 },
 {
 	itemName:"Chowmein Somasa",
