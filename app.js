@@ -43,7 +43,7 @@ app.get('/',(req,res)=>{
 	res.sendFile(path.join(__dirname,'/landing_page/index.html'))
 })
 
-const PORT = 5000;
+const PORT = 8080;
 
 app.listen(PORT,()=>{
 	console.log("server is running at port " + PORT)
