@@ -36,7 +36,7 @@ router.post('/',(req,res)=>{
 			registerNewUser(email,req.body.password,req.body.name,otp).save()
 				.then(()=>{
 					console.log('new user saved');
-					// sendMail(req.body.name,email,otp);
+					sendMail(req.body.name,email,otp);
 					res.json(responseData);
 			})
 		}

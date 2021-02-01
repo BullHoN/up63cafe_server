@@ -2,6 +2,9 @@ const express = require('express');
 const cors = require('cors');
 const mongoose = require('mongoose');
 const path = require('path');
+const sendMail = require('./mail/mail');
+
+// sendMail('vaibahv','vaibhavbhardwaaj@gmail.com',1234);
 
 const app = express();
 
@@ -15,7 +18,13 @@ app.use(express.urlencoded({extended:false}));
 app.use(cors());
 
 // test
-
+// const User = require('./models/User');
+// User.find({}).then((items)=>{
+// 	items.forEach((item)=>{
+// 		item.isVerified = true;
+// 		item.save();
+// 	})
+// })
 
 // routes
 app.use('/login',require('./login/loginRoutes'));
@@ -32,6 +41,7 @@ app.use('/',require('./deliveryBoy_routes/deliveryBoyRoutes'));
 app.use('/user',require('./forget_password/forgetPasswordRoutes'));
 app.use('/user/block',require('./block_user/blockUser'));
 app.use('/order/cancel',require('./cancel/orderCanel'))
+app.use('/googleSignIn',require('./signup/googleSignUp'))
 
 
 // static images

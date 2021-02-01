@@ -5,6 +5,42 @@ const specials = [{
 	itemImageUrl:"https://www.up63cafe.com/images/crispy_momos.jpg"
 },
 {
+	itemName:"Cheesy Momos",
+	fullPlatePrice:80,
+	halfPlatePrice:0,
+	itemImageUrl:"https://www.up63cafe.com/images/chessy_momos.jpg"
+},
+{
+	itemName:"Kurkure Burger",
+	fullPlatePrice:70,
+	halfPlatePrice:0,
+	itemImageUrl:"https://www.up63cafe.com/images/kurkure_burger.jpg"
+},
+{
+	itemName:"Green Chilly Pasta",
+	fullPlatePrice:60,
+	halfPlatePrice:0,
+	itemImageUrl:"https://www.up63cafe.com/images/green_chilly_pasta.jpg"
+},
+{
+	itemName: "Peri Peri Pasta",
+	fullPlatePrice: 70,
+	halfPlatePrice: 0,
+	itemImageUrl:"https://www.up63cafe.com/images/periperi_pasta.jpg"
+},
+{
+	itemName: "Masala Paneer Sandwich",
+	fullPlatePrice: 50,
+	halfPlatePrice: 0,
+	itemImageUrl:"https://www.up63cafe.com/images/masala_panner_sandwitch.jpg"
+},
+{
+	itemName: "Gravy Momos",
+	fullPlatePrice: 70,
+	halfPlatePrice: 0,
+	itemImageUrl:"https://www.up63cafe.com/images/gravy_momos.jpg"
+},
+{
 	itemName:"Veg Chapli Kabab",
 	fullPlatePrice:60,
 	halfPlatePrice:0,
@@ -20,11 +56,11 @@ const specials = [{
 	itemName:"Crispy Paneer Pakoda",
 	fullPlatePrice:100,
 	halfPlatePrice:50,
-	itemImageUrl:"https://www.up63cafe.com/images/chowmein_samosa.jpg"
+	itemImageUrl:"https://www.up63cafe.com/images/crispy_panner.jpg"
 },
 {
 	itemName:"Chilly Soya Bean",
-	fullPlatePrice:70,
+	fullPlatePrice:80,
 	halfPlatePrice:40,
 	itemImageUrl:"https://www.up63cafe.com/images/chilly_soya_bean.jpg"
 },
@@ -35,10 +71,10 @@ const specials = [{
 	itemImageUrl:"https://www.up63cafe.com/images/chowmein_samosa.jpg"
 },
 {
-	itemName:"Soya Chap",
+	itemName:"Crispy Soya Chap",
 	fullPlatePrice:50,
 	halfPlatePrice:0,
-	itemImageUrl:"https://www.up63cafe.com/images/soya_chap.png"
+	itemImageUrl:"https://www.up63cafe.com/images/crispy_soya_chap1.jpg"
 },
 {
 	itemName:"Crispy Baby Corn",
